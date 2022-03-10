@@ -41,7 +41,10 @@ public class GUI extends JFrame {
     @Override
     public void paint(Graphics g) {
         Graphics2D g2d = (Graphics2D)g;
-        g2d.drawLine(10,10,100,100);
+        for (int i = 0; i < arrToSort.length; i++) {
+            g2d.setColor(PILLAR_COLOR);
+            g2d.fillRect(i*8, 700 - arrToSort[i]*5, 7, arrToSort[i]*5);
+        }
     }
 
     private void addButtons() {
