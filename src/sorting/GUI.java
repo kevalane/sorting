@@ -9,30 +9,39 @@ import javax.swing.JComboBox;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.Graphics2D;
+import java.awt.Graphics;
 
 
-public class GUI {
+public class GUI extends JFrame {
 
     private static final Color PILLAR_COLOR = new Color(255,0,0,50);
-    JFrame frame;
     Container pane;
     String[] algorithms;
+    int[] arrToSort;
 
 
-    public GUI(String[] algorithms) {
-        this.frame = new JFrame("Sorting Visualizer");
-        this.pane = frame.getContentPane();
+    public GUI(String[] algorithms, int[] arr) {
+        this.pane = this.getContentPane();
         this.algorithms = algorithms;
+        this.arrToSort = arr;
         this.initGui();
     }
 
     private void initGui() {
-        this.frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.addButtons();
-        // this.addBoard();
-        this.frame.pack();
-        this.frame.setResizable(false);
-        this.frame.setVisible(true);
+        this.setSize(800,800);
+        this.setLocationRelativeTo(null);
+        // this.frame.pack();
+        this.setVisible(true);
+    }
+
+    @Override
+    public void paint(Graphics g) {
+        Graphics2D g2d = (Graphics2D)g;
+        g2d.drawLine(10,10,100,100);
     }
 
     private void addButtons() {
@@ -44,7 +53,7 @@ public class GUI {
         panel.add(solveButton);
 
         this.pane.add(panel, BorderLayout.PAGE_END);
-        this.frame.getRootPane().setDefaultButton(solveButton);
+        this.getRootPane().setDefaultButton(solveButton);
 
         solveButton.addActionListener(e -> {
             String selectedAlgo = "You selected " + algos.getItemAt(algos.getSelectedIndex());
