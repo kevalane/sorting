@@ -40,6 +40,7 @@ public class GUI extends JFrame {
 
     @Override
     public void paint(Graphics g) {
+        super.paint(g);
         Graphics2D g2d = (Graphics2D)g;
         for (int i = 0; i < arrToSort.length; i++) {
             g2d.setColor(PILLAR_COLOR);
