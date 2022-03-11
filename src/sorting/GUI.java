@@ -9,7 +9,6 @@ import javax.swing.JComboBox;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Container;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Graphics;
 
@@ -34,7 +33,6 @@ public class GUI extends JFrame {
         this.addButtons();
         this.setSize(800,800);
         this.setLocationRelativeTo(null);
-        // this.frame.pack();
         this.setVisible(true);
     }
 
