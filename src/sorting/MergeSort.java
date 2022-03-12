@@ -15,6 +15,13 @@ public class MergeSort extends Sorter {
         if (first < last) {
             int mid = first + (last - first)/2;
             sort(tempArray, first, mid);
+            this.gui.changeArr(this.arr);
+            try {
+                Thread.sleep(50);
+                this.gui.repaint();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             sort(tempArray, mid+1, last);
             this.gui.changeArr(this.arr);
             try {
@@ -24,6 +31,13 @@ public class MergeSort extends Sorter {
                 e.printStackTrace();
             }
             merge(tempArray, first, mid + 1, last);
+            this.gui.changeArr(this.arr);
+            try {
+                Thread.sleep(50);
+                this.gui.repaint();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 
