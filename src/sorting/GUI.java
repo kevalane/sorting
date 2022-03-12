@@ -36,6 +36,10 @@ public class GUI extends JFrame {
         this.setVisible(true);
     }
 
+    public void changeArr(int[] arr) {
+        this.arrToSort = arr;
+    }
+
     @Override
     public void paint(Graphics g) {
         super.paint(g);
