@@ -1,13 +1,9 @@
 package sorting;
 
-public class SelectionSort {
-
-    private int[] arr;
-    private GUI gui;
+public class SelectionSort extends Sorter {
 
     public SelectionSort(int[] arr, GUI gui) {
-        this.arr = arr;
-        this.gui = gui;
+        super(arr, gui);
     }  
 
     public void sort() {
@@ -35,7 +31,5 @@ public class SelectionSort {
         }
     }
 
-    private int[] getArr() {
-        return this.arr;
-    }
+    
 }
