@@ -18,7 +18,7 @@ public class SelectionSort extends Sorter {
             this.arr[i] = temp;
             this.gui.changeArr(this.arr);
             try {
-                Thread.sleep(50);
+                Thread.sleep(this.DELAY);
                 this.gui.repaint();
             } catch (InterruptedException e) {
                 e.printStackTrace();

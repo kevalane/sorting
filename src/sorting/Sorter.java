@@ -1,6 +1,8 @@
 package sorting;
 
 public abstract class Sorter {
+
+    protected final int DELAY = 150;
     protected int[] arr;
     protected GUI gui;
 
