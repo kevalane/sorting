@@ -1,6 +1,6 @@
 package sorting;
 
-public class Sorter {
+public abstract class Sorter {
     protected int[] arr;
     protected GUI gui;
 
@@ -8,6 +8,8 @@ public class Sorter {
         this.arr = arr;
         this.gui = gui;
     }
+
+    public abstract void sort();
 
     protected int[] getArr() {
         return this.arr;

@@ -1,8 +1,12 @@
 package sorting;
 
-public class MergeSort {
+public class MergeSort extends Sorter {
 
-    public MergeSort() {
+    public MergeSort(int[] arr, GUI gui) {
+        super(arr, gui);
+    }
+
+    public void sort() {
         
     }
 }
