@@ -36,9 +36,17 @@ public class GUI extends JFrame {
         this.setVisible(true);
     }
 
+    public void changeArr(int[] arr) {
+        this.arrToSort = arr;
+    }
+
     @Override
     public void paint(Graphics g) {
-        super.paint(g);
+        update(g);
+    }
+
+    public void update(Graphics g) {
+        g.clearRect(0,0,800,700);
         Graphics2D g2d = (Graphics2D)g;
         for (int i = 0; i < arrToSort.length; i++) {
             g2d.setColor(PILLAR_COLOR);

@@ -11,10 +11,9 @@ public class App {
             arr[i] = rand.nextInt(120);
         }
         GUI g = new GUI(algos, arr);
+        // Sorter ss = new SelectionSort(arr, g);
+        Sorter ms = new MergeSort(arr, g);
         Thread.sleep(2000);
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = 1;
-        }
-        g.repaint();
+        ms.sort();
     }
 }
